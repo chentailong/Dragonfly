@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTitle">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/program_trumpet_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15sp"
+            android:background="@drawable/ic_trumpet" />
+
+
+        <TextView
+            android:id="@+id/program_content_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/program_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/program_trumpet_imageView"
+            android:ellipsize="end"
+            android:text="我是大标题"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/program_people_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/audience_count"
+            android:background="@drawable/ic_peoples" />
+
+        <TextView
+            android:id="@+id/audience_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/program_microphone_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/program_trumpet_imageView"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8sp"
+            android:background="@drawable/ic_microphone" />
+
+        <TextView
+            android:id="@+id/program_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/program_title"
+            android:layout_marginTop="23dp"
+            android:layout_toRightOf="@+id/program_microphone_imageView"
+            android:text="陆秋傧 " />
+
+
+        <TextView
+            android:id="@+id/program_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/program_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginRight="10dp"
+            android:text="19:00" />
+
+    </RelativeLayout>
+
+</LinearLayout>

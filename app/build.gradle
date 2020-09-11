@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+repositories {
+    maven {
+        url uri('http://maven.qingting.fm/')
+    }
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "net.along.dragonflyfm"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'qtsdkdemo'
+            keyPassword '123456'
+            storeFile file('../QTSdkDemo.keystore')
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            includeAndroidResources = true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(path: ':commutils')
+    implementation files('libs\\TingPhoneOpenSDK_7.2.1.jar')
+    implementation files('libs\\XmDownload_2.0.jar')
+    implementation files('libs\\XmlyOAuth2SDK_V2.0.jar')
+    implementation 'com.github.satyan:sugar:1.5'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.squareup.okio:okio:1.15.0'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha04'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'liji.library.dev:citypickerview:5.2.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01'
+    if (findProject(":qtsdk")) {
+        api project(":qtsdk")
+    } else {
+        implementation 'fm.qingting.open.android:qtsdk:1.3.0'
+    }
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#EDE9E9"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="125dp"
+        android:layout_height="170dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/fragment_searches_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/fragment_searches_image"
+            android:layout_width="110dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/sh" />
+
+        <TextView
+            android:id="@+id/fragment_searches_station_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="上海KFM981"
+            android:textColor="#131313" />
+
+        <TextView
+            android:id="@+id/searches_content_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:drawable/ic_menu_myplaces" />
+
+            <TextView
+                android:id="@+id/fragment_searches_number_of_listeners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="收听：568972"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/fragment_searches_collection"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/ic_not_collect" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

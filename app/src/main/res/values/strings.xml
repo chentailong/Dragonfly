@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">蜻蜓FM</string>
+    <string name="txt_copy_right">蜻蜓FM</string>
+    <string name="txt_ip_hint">请输入服务器IP</string>
+    <string name="txt_port_hint">请输入端口号</string>
+
+    <string name="text_fragment_radio">电台</string>
+    <string name="text_fragment_searches">搜索</string>
+    <string name="text_fragment_analyze">分析</string>
+
+    <string name="text_program_return">返回</string>
+    <string name="program_name">电台名称</string>
+
+    <string-array name="main_indicator_name">
+        <item>电台</item>
+        <item>搜索</item>
+        <item>分析</item>
+    </string-array>
+
+</resources>

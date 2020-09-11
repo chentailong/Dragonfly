@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorWhite"
+        app:itemRippleColor="@color/colorWhite"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_bottom_navigation_view" />
+
+
+    <View
+        android:id="@+id/bottom_view_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@+id/button_rg_tab_bar"
+        android:background="@color/colorBai" />
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_view_bar" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/to_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_view_bar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/colorWhite"
+        android:src="@drawable/ic_music"
+        app:fabSize="mini"
+        app:rippleColor="@color/colorPrimary" />
+</RelativeLayout>
